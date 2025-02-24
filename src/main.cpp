@@ -99,12 +99,16 @@ void print_prompt()
 
 command strtoenum(std::string input_string)
 {
-        command enum_out;
+        command enum_out = nop;
 
         // ...
 
-        return enum_out;
+	return enum_out;
 }
+
+void f_mkdir(std::string directory_name) {}
+void f_touch(std::string filename) {}
+void f_stat(std::string filename) {}
 
 void terminal()
 {
@@ -126,20 +130,19 @@ void terminal()
                 current_command = strtoenum(contents.arg0);
 
 		// Take the command enum and call the corresponding cmd with arg1 - if it exists / is necessary.
+
 	}
 	return;
 }
 
 int main(void)
 {
-        /*
-	std::map<std::string, command> strtoenum_map
+	std::map<std::string, command> strenum_map
 	{
 		{"nop", nop}, {"mkdir", mkdir},
 		{"touch", touch}, {"stat", stat},
 		{"exit", exit}
 	};
-        */
 
 	terminal();
 
