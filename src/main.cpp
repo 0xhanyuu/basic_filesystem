@@ -97,6 +97,15 @@ void print_prompt()
         std::cout << "user@rfs $ ";
 }
 
+command strtoenum(std::string input_string)
+{
+        command enum_out;
+
+        // ...
+
+        return enum_out;
+}
+
 void terminal()
 {
 	command current_command = nop;
@@ -112,6 +121,9 @@ void terminal()
 
 		// Debugging purposes: Printing out the contents of the lexer.
 		sanity_check_print_lac(contents);
+
+                // Take the user input and convert it into an enum.
+                current_command = strtoenum(contents.arg0);
 
 		// Take the command enum and call the corresponding cmd with arg1 - if it exists / is necessary.
 	}
