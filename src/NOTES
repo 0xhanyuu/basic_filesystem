@@ -1,0 +1,37 @@
+Indexing Methods
+================
+There are several methods of indexing the contents of files,
+with the most commonly used being i-nodes and File Allocation Tables.
+
+inodes
+------
+Each file is made of data blocks, index blocks, and one inode block.
+Inodes are a natural place to store Metadata such as file size, owner,
+creation/access/modification times, locks, etc.
+
+FAT
+---
+There are several variants on FAT, but the general design is to have a table,
+(actually a pair of tables, one serving as a backup for the first in case it is corrupted)
+which holds a list of blocks of a given size, which map to the whole capacity of the disk. 
+
+
+Workings of File Systems
+========================
+There are several common approaches to storing disk information.
+However, in comparison to memory management,
+there are some key differences in managing disk media:
+
+-  Data can only be written in fixed size chunks.
+-  Access times are different for different locations on the disk.
+   Seeking is usually a costly operation..
+-  Data throughput is very small compared to RAM.
+-  Data commonly has to be maintained.
+
+Hence some file systems have specialized structures, algorithms,
+or combinations thereof to improve speed ratings.
+
+
+USTAR
+=====
+- Easiest

@@ -1,0 +1,10 @@
+# TODO:
+
+<-> get used to the c++ stdlib in order to:
+ -  be able to implement things better, such as ...   |
+                                                      v
+<-> reimplement the way to interact with the fs, i.e. the terminal, as:
+ -  the lexer, etc. all would have been modular and effective in practice,
+    but it should not have taken so much of the focus
+
+<-> take notes of fs theory in a file
